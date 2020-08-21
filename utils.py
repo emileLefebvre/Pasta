@@ -7,10 +7,12 @@ def afficher_menu():
     print("\n-------- Menu --------\n"
           "0: Quitter\n"
           "1: Créer un ingredient\n"
-          "2: Afficher les ingrédients\n"
-          "3: Sauvegarder\n"
-          "4: Charger\n"
-          "5: Modifier un ingrédient")
+          "2: Supprimer un ingrédient\n"
+          "3: Modifier un ingrédient\n"
+          "4: Afficher les ingrédients\n"
+          "5: Charger\n"
+          "6: Sauvegarder")
+
 
 def menu():
     afficher_menu()
@@ -23,15 +25,19 @@ def menu():
                 creer_ingredient()
                 afficher_menu()
             elif int(choix) == 2:
-                afficher_liste_ingredients()
+                supprimer_ingredient()
                 afficher_menu()
             elif int(choix) == 3:
-                sauvegarder()
+                modifier_ingredient()
                 afficher_menu()
             elif int(choix) == 4:
-                charger()
+                afficher_liste_ingredients()
+                afficher_menu()
             elif int(choix) == 5:
-                modifier_ingredient()
+                charger()
+                afficher_menu()
+            elif int(choix) == 6:
+                sauvegarder()
                 afficher_menu()
             else:
                 print("Choix pas valide :(")
@@ -137,6 +143,21 @@ def modifier_ingredient():
                 nom = input("Nouveau nom: ")
                 LISTE_INGREDIENTS[index].set_nom(nom)
             print("-- Modification réussi --")
+
+def supprimer_ingredient():
+    nom = input("Nom de l'ingrédient à supprimer: ")
+    index = 0
+    for x in range (len(LISTE_INGREDIENTS)):
+        if nom == LISTE_INGREDIENTS[x].get_nom():
+            index = x
+            break
+    if index == 0:
+        print("Aucun ingrédient de ce nom")
+    else:
+        LISTE_INGREDIENTS.pop(index)
+        print("Ingredient supprimé")
+
+def creer_recette():
 
 
 def quitter():
