@@ -10,7 +10,7 @@ def afficher_menu():
           "2: Afficher les ingrédients\n"
           "3: Sauvegarder\n"
           "4: Charger\n"
-          "5: Modifier un ingrédients")
+          "5: Modifier un ingrédient")
 
 def menu():
     afficher_menu()
@@ -30,6 +30,8 @@ def menu():
                 afficher_menu()
             elif int(choix) == 4:
                 charger()
+            elif int(choix) == 5:
+                modifier_ingredient()
                 afficher_menu()
             else:
                 print("Choix pas valide :(")
@@ -71,9 +73,6 @@ def creer_ingredient():
         LISTE_INGREDIENTS.append(Ingredient(nom,float(prix),float(qty),unite))
         print("-- Création réussie --")
 
-def modifier_ingredient():
-    pass
-
 def afficher_liste_ingredients():
 
     if len(LISTE_INGREDIENTS) == 0:
@@ -98,13 +97,18 @@ def charger():
     print("Chargement terminé")
 
 def modifier_ingredient():
-    ing = input("Quel est le nom de l'ingredient vous voulez modifier: ")
+    nom_ing = input("Nom de l'ingredient à modifier: ")
+    index = 0
+    existe = False
     for x in range(len(LISTE_INGREDIENTS)):
-        if ing == LISTE_INGREDIENTS[x]:
-            print("Voici l'ingredient: \nnom: ", LISTE_INGREDIENTS[x].get_nom)
-
-
-
+        if nom_ing == LISTE_INGREDIENTS[x].get_nom():
+            existe = True
+            index = x
+            break
+    if existe:
+        print("existe: ", index)
+    else:
+        print("existe pas", index)
 
 def quitter():
     while True:
