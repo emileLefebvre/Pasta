@@ -99,16 +99,45 @@ def charger():
 def modifier_ingredient():
     nom_ing = input("Nom de l'ingredient à modifier: ")
     index = 0
-    existe = False
     for x in range(len(LISTE_INGREDIENTS)):
         if nom_ing == LISTE_INGREDIENTS[x].get_nom():
-            existe = True
             index = x
             break
-    if existe:
-        print("existe: ", index)
+    if index == 0:
+       print("Cet ingrédient n'existe pas :(")
     else:
-        print("existe pas", index)
+        choix = ["NOM","PRIX","UNITE"]
+        champ = input("Quel champ voulez-vous modifier? (Nom, prix ou unite): ").upper()
+        if champ in choix:
+            if champ == "PRIX":
+                while 1:
+                    prix = input("Prix: ")
+                    try:
+                        float(prix)
+                        break
+                    except ValueError:
+                        print("Veuillez entrer un nombre valide")
+                while 1:
+                    qty = input("Quantité pour le prix: ")
+                    try:
+                        float(qty)
+                        LISTE_INGREDIENTS[index].set_prix_unite(float(prix), float(qty))
+                        break
+                    except ValueError:
+                        print("Veuillez entrer un nombre valide")
+            elif champ == "UNITE":
+                while 1:
+                    unite = input("L'unité de l'ingrédient (Kg, L ou unité): ")
+                    if unite in ["Kg", "L", "unite"]:
+                        LISTE_INGREDIENTS[index].set_unite(unite)
+                        break
+                    else:
+                        print("Veuillez entrer une unité valide (Kg, L ou unité)")
+            else:
+                nom = input("Nouveau nom: ")
+                LISTE_INGREDIENTS[index].set_nom(nom)
+            print("-- Modification réussi --")
+
 
 def quitter():
     while True:
