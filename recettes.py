@@ -1,5 +1,5 @@
 class Recette:
-    def __init__(self, nom, liste_ingredients, qty, unite):
+    def __init__(self, nom, liste_ingredients, qty, unite,prix_vente):
         self.nom = nom
         self.prix = 0
         self.qty = qty
@@ -8,6 +8,7 @@ class Recette:
         self.length_qty = len(str(self.qty))
         self.length_unite = len(unite)
         self.liste_ingredients = []
+        self.prix_vente = prix_vente
         #liste ingredient est une liste de liste avec le nom en [0] et la quantite en [1] et l'unite en [2] et le prix en [3].
         for i in liste_ingredients:
             self.liste_ingredients.append([i[0].get_nom(), str(i[1]), i[0].get_unite(), round(i[0].get_prix_unite()*float(i[1]),2)])
@@ -32,6 +33,13 @@ class Recette:
 
     def set_nom(self, nom):
         self.nom = nom
+
+    def print_prix_revient(self):
+        prix_unitaire = round(self.prix / float(self.qty),2)
+        print(self.get_nom()," | ", prix_unitaire, "/", self.unite," | ",
+              self.prix_vente, "/", self.unite, " | ",
+              float(self.prix_vente)-prix_unitaire, "/", self.unite," | ",
+              "{:.2f}".format(100*(float(self.prix_vente)-prix_unitaire)/float(self.prix_vente)), "%", end="\n", sep="")
 
     def print_recette(self):
         contour = "*" * (self.length_ing + self.length_prix + self.length_unite +self.length_qty + 12)

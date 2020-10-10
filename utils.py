@@ -15,8 +15,9 @@ def afficher_menu():
           "4: Afficher les ingrédients\n"
           "5: Créer une recette\n"
           "6: Afficher les recette\n"
-          "7: Charger\n"
-          "8: Sauvegarder")
+          "7: Afficher les prix de revient\n"
+          "8: Charger\n"
+          "9: Sauvegarder")
 
 def menu():
     afficher_menu()
@@ -27,67 +28,27 @@ def menu():
                 quitter()
             elif int(choix) == 1:
                 creer_ingredient()
-                afficher_menu()
             elif int(choix) == 2:
                 supprimer_ingredient()
-                afficher_menu()
             elif int(choix) == 3:
                 modifier_ingredient()
-                afficher_menu()
             elif int(choix) == 4:
                 afficher_liste_ingredients()
-                afficher_menu()
             elif int(choix) == 5:
                 creer_recette()
-                afficher_menu()
             elif int(choix) == 6:
                 afficher_liste_recette()
-                afficher_menu()
             elif int(choix) == 7:
-                charger()
-                afficher_menu()
+                afficher_prix_revient()
             elif int(choix) == 8:
+                charger()
+            elif int(choix) == 9:
                 sauvegarder()
-                afficher_menu()
             else:
                 print("Choix pas valide :(")
+            afficher_menu()
         else:
             print("Choix pas valide :(")
-
-def creer_ingredient():
-    print("\n-- Création d'un nouvel ingredient --")
-    nom = input("Nom de l'ingrédient: ")
-    existe = False
-
-    for x in range(len(LISTE_INGREDIENTS)):
-        if nom == LISTE_INGREDIENTS[x].get_nom():
-            existe = True
-    if existe:
-        print("Il existe déjà un ingrédient portant ce nom... tentative annulée")
-    else:
-        while 1:
-            prix = input("Prix: ")
-            try:
-                float(prix)
-                break
-            except ValueError:
-                print("Veuillez entrer un nombre valide")
-        while 1:
-            qty = input("Quantité pour le prix: ")
-            try:
-                float(qty)
-                break
-            except ValueError:
-                print("Veuillez entrer un nombre valide")
-        while 1:
-            unite = input("L'unité de l'ingrédient (Kg, L ou unité): ")
-            if unite in ["Kg", "L", "unite"]:
-                break
-            else:
-                print("Veuillez entrer une unité valide (Kg, L ou unité)")
-
-        LISTE_INGREDIENTS.append(Ingredient(nom,float(prix),float(qty),unite))
-        print("-- Création réussie --")
 
 def afficher_liste_ingredients():
 
@@ -96,7 +57,7 @@ def afficher_liste_ingredients():
     else:
         print("\n -- Ingrédients --")
         for x in LISTE_INGREDIENTS:
-            x.print_ing()
+            x.to_string()
 
 def afficher_liste_recette():
 
@@ -240,8 +201,20 @@ def creer_recette():
                 break
             else:
                 print("Veuillez entrer une unité valide (Kg, L ou unité)")
-        LISTE_RECETTES.append(Recette(nom,liste_ingredients,qty_total,unite_total))
+        while 1:
+            prix_vente = input("Quel est le prix de vente: ")
+            try:
+                float(prix_vente)
+                break
+            except ValueError:
+                print("Veuillez entrer un nombre valide")
+        LISTE_RECETTES.append(Recette(nom,liste_ingredients,qty_total,unite_total,prix_vente))
         print("-- Création réussie --")
+
+def afficher_prix_revient():
+    print("- Prix de revient")
+    for x in LISTE_RECETTES:
+        x.print_prix_revient()
 
 def quitter():
     while True:
