@@ -1,6 +1,9 @@
-from utils import *
+from ingredients import Ingredient
+
+DICT_INGREDIENTS ={}
 
 def creer_ingredient():
+
     print("\n-- Création d'un nouvel ingredient --")
     nom = input("Nom de l'ingrédient: ")
     existe = False

@@ -1,9 +1,8 @@
-from ingredients import Ingredient
+from ingredients_utils import *
 from recettes import Recette
 import pickle
 import os
 
-LISTE_INGREDIENTS = []
 LISTE_RECETTES = []
 
 def afficher_menu():
