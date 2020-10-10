@@ -1,6 +1,7 @@
 from ingredients import Ingredient
 from recettes import Recette
 import pickle
+import os
 
 LISTE_INGREDIENTS = []
 LISTE_RECETTES = []
@@ -102,7 +103,7 @@ def afficher_liste_recette():
     if len(LISTE_RECETTES) == 0:
         print("\nAucune recette n'a été crée")
     else:
-        print("\n -- Recettes --")
+        print("\n ----- Recettes -----")
         for x in LISTE_RECETTES:
             x.print_recette()
 
@@ -115,12 +116,15 @@ def sauvegarder():
     print("Enregistrement terminé")
 
 def charger():
-    data = pickle.load(open("data.pickle", "rb"))
-    global LISTE_INGREDIENTS
-    global LISTE_RECETTES
-    LISTE_INGREDIENTS = data["ing"]
-    LISTE_RECETTES = data["recette"]
-    print("Chargement terminé")
+    if os.path.getsize("data.pickle") == 0:
+        print("Chargement impossible... fichier vide")
+    else:
+        data = pickle.load(open("data.pickle", "rb"))
+        global LISTE_INGREDIENTS
+        global LISTE_RECETTES
+        LISTE_INGREDIENTS = data["ing"]
+        LISTE_RECETTES = data["recette"]
+        print("Chargement terminé")
 
 def modifier_ingredient():
     nom_ing = input("Nom de l'ingredient à modifier: ")
@@ -223,7 +227,20 @@ def creer_recette():
         break
 
     if not existe:
-        LISTE_RECETTES.append(Recette(nom,liste_ingredients))
+        while 1:
+            qty_total = input("Quelle est la qantité finale de la recette: ")
+            try:
+                float(qty_total)
+                break
+            except ValueError:
+                print("Veuillez entrer un nombre valide")
+        while 1:
+            unite_total = input("L'unite finale de la recette: ")
+            if unite_total in ["Kg", "L", "unite"]:
+                break
+            else:
+                print("Veuillez entrer une unité valide (Kg, L ou unité)")
+        LISTE_RECETTES.append(Recette(nom,liste_ingredients,qty_total,unite_total))
         print("-- Création réussie --")
 
 def quitter():
