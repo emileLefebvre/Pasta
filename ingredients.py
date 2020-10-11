@@ -23,7 +23,7 @@ class Ingredient:
         self.unite = unite
 
     def to_string(self):
-        print(self.get_nom(), ": ", "{:.2f}".format(self.get_prix_unite()), "/", self.get_unite(), sep="", end="\n")
+        return "{}: {:.2f}/{}".format(self.get_nom(), self.get_prix_unite(), self.get_unite())
 
 
 
