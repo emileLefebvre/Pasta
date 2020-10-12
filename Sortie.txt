@@ -48,10 +48,40 @@ Veau: 9.30/Kg
 Vin blanc: 1.85/L
 Vinaigre blanc: 1.16/L
 Vodka: 22.86/L
+
+-- Ingredients (recette) --
+Sauce a la viande regu: 10.44/Kg
 --------------------------------------------------
 
-Aucune recette n'a encore ete cree
+-- Recettes --
+
+- Sauce a la viande regu
+**************************************************
+* Couvercle sauce (LFE) | 30.000 Unite |   2.70$ *
+*             Cup 16 Oz | 30.000 Unite |   5.10$ *
+*                 Boeuf |  5.000    Kg |  52.45$ *
+*                  Veau |  5.000    Kg |  46.50$ *
+*                Celeri |  1.200    Kg |   2.72$ *
+*        Oignon congele |  2.000    Kg |   6.22$ *
+*        Piment congele |  1.000    Kg |   3.35$ *
+*       Tomates (Magic) |  3.000 Unite |  16.14$ *
+*    Tomates (Valoroso) |  3.000 Unite |  15.39$ *
+*       Pate de tomates |  1.500    Kg |   3.46$ *
+*                   Sel |  0.090    Kg |   0.04$ *
+*                Poivre |  0.030    Kg |   0.41$ *
+*                 Sucre |  0.200    Kg |   0.28$ *
+*               Origano |  0.040    Kg |   1.04$ *
+*               Basilic |  0.020    Kg |   0.28$ *
+*     Ail hache (huile) |  0.130    Kg |   0.50$ *
+* ---------------------------------------------- *
+*                 Total | 15.000    Kg | 156.59$ *
+**************************************************
 --------------------------------------------------
 
-Aucune recette n'a encore ete cree
+-- Cout de revient --
+************************************************************************************
+*               Recettes | Prix unitaire | Prix de vente |   Difference  |    %    *
+* ---------------------- | ------------- | ------------- | ------------- | ------- *
+* Sauce a la viande regu |  10.44 /    Kg | 15.25 /    Kg | 4.81 /    Kg |  31.54  *
+************************************************************************************
 --------------------------------------------------
