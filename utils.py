@@ -10,20 +10,20 @@ DICT_RECETTES = {}
 #Partie sur les ingredients
 def creer_ingredient():
     global DICT_INGREDIENTS
-    print("\n-- Création d'un nouvel ingredient --")
-    nom = input("Nom de l'ingrédient: ")
+    print("\n-- Creation d'un nouvel ingredient --")
+    nom = input("Nom de l'ingredient: ")
 
     if nom in DICT_INGREDIENTS:
-        print("Il existe déjà un ingredient de ce nom. Création annulée.")
+        print("Il existe deja un ingredient de ce nom. Creation annulee.")
     else:
         prix = demander_float("Prix: ",2)
-        qty = demander_float("Quantité: ",3)
-        unite = demander_unite("L'unité de l'ingredient. Kg, L ou Unite: ")
+        qty = demander_float("Quantite: ",3)
+        unite = demander_unite("L'unite de l'ingredient. Kg, L ou Unite: ")
 
 
         DICT_INGREDIENTS[nom] = Ingredient(nom, prix, qty, unite)
         DICT_INGREDIENTS = dict(sort_dict_by_key(DICT_INGREDIENTS))
-        print("-- Création réussie --")
+        print("-- Creation reussie --")
 
 def sort_dict_by_key(d):
 
@@ -36,30 +36,34 @@ def sort_dict_by_key(d):
 
 def ingredients_to_string():
     s = ""
-    if DICT_INGREDIENTS != {}:
-        s += "\n-- Ingredients\n"
-        for x in DICT_INGREDIENTS.values():
-            s += x.to_string() + "\n"
+    if not (DICT_INGREDIENTS == {} and DICT_RECETTES == {}):
+        if DICT_INGREDIENTS != {}:
+            s += "\n-- Ingredients de base --\n"
+            for x in DICT_INGREDIENTS.values():
+                s += x.to_string() + "\n"
+        if DICT_RECETTES != {}:
+            s += "\n-- Ingredients (recette) --\n"
+            for x in DICT_RECETTES.values():
+                s += x.ing_to_string() + "\n"
     else:
-        s += "\nAucun ingredient n'a encore été crée"
-
+        s += "\nAucun ingredient n'a encore ete cree\n"
     return s
 
 def creer_recette():
-    print("\n-- Création d'une nouvelle recette --")
+    print("\n-- Creation d'une nouvelle recette --")
     nom = input("Nom de la recette: ")
     ing = []
 
     if nom in DICT_RECETTES:
-        print("Il existe déjà une recette de ce nom. Création annulée.")
+        print("Il existe deja une recette de ce nom. Creation annulee.")
     else:
         i = 0
         while True:
             #ing = [[Ingredient, (float)qty]] liste de liste des [ing, qty]
-            i = + 1
+            i += 1
             ing.append(demander_ingredient(i))
             while True:
-                s = input("Un autre ingrédient à rajouter? (Oui/Non): ")
+                s = input("Un autre ingredient a rajouter? (Oui/Non): ")
                 if s == "Non" or s == "Oui":
                     break
                 else:
@@ -67,12 +71,12 @@ def creer_recette():
             if s == "Non":
                 break
 
-        qty = demander_float("Quantité totale de la recette: ", 3)
-        unite = demander_unite("L'unité de la recette: ")
+        qty = demander_float("Quantite totale de la recette: ", 3)
+        unite = demander_unite("L'unite de la recette: ")
         prix_vente = demander_float("Quel est le prix de vente: ", 2)
 
         DICT_RECETTES[nom] = Recette(nom, ing, qty, unite, prix_vente)
-        print("-- Création réussie --")
+        print("-- Creation reussie --")
 
 def recette_to_string():
     s = ""
@@ -81,18 +85,19 @@ def recette_to_string():
         for x in DICT_RECETTES.values():
             s += x.to_string() + "\n"
     else:
-        s += "\nAucune recette n'a encore été crée"
+        s += "\nAucune recette n'a encore ete cree\n"
     return s
 
 #Partie exclusivement utils
 def afficher_menu():
     print("\n-------- Menu --------\n"
           "0: Quitter\n"
-          "1: Créer un ingredient\n"
-          "2: Créer une recette\n"
-          "4: Afficher les ingrédients\n"
+          "1: Creer un ingredient\n"
+          "2: Creer une recette\n"
+          "4: Afficher les ingredients\n"
           "5: Afficher les recettes\n"
           "6: Afficher les couts de revient\n"
+          "7: Imprimer\n"
           "8: Charger\n"
           "9: Sauvegarder")
 
@@ -113,6 +118,8 @@ def menu():
                 afficher_recettes()
             elif int(choix) == 6:
                 afficher_cout_revient()
+            elif int(choix) == 7:
+                imprimer()
             elif int(choix) == 8:
                 charger()
             elif int(choix) == 9:
@@ -130,14 +137,14 @@ def demander_float(message, n):
             float(f)
             break
         except ValueError:
-            print("Nombre invalide (, à la place du .)??")
+            print("Nombre invalide (, a la place du .)??")
     return round(float(f), n)
 
 def demander_unite(message):
     while True:
         u = input(message)
         if u not in ["Kg", "L", "Unite"]:
-            print("Unité non valide. Choix valide: Kg, L ou Unite")
+            print("Unite non valide. Choix valide: Kg, L ou Unite")
         else:
             break
     return u
@@ -147,11 +154,17 @@ def demander_ingredient(i):
         nom = input("Nom de l'ingredient #{}: ".format(i))
         if nom in DICT_INGREDIENTS:
             ing = DICT_INGREDIENTS[nom]
-            qty = demander_float("Quelle quantité ({}): "
+            qty = demander_float("Quelle quantite ({}): "
                                  .format(ing.get_unite()),3)
             break
+        elif nom in DICT_RECETTES:
+            ing = DICT_RECETTES[nom]
+            qty = demander_float("Quelle quantite ({}): "
+                                 .format(ing.get_unite()), 3)
+            break
         else:
-            print("Aucun ingrédient de ce nom")
+            print("Aucun ingredient de ce nom")
+
     return [ing, qty]
 
 def afficher_ingredients():
@@ -161,11 +174,29 @@ def afficher_recettes():
     print(recette_to_string())
 
 def afficher_cout_revient():
-    len_nom = 0
-    len_prix_unit = 0
-    len_prix_vente = 0
-    len_diff = 0
-    return 0
+    print(cout_revient_to_string())
+
+def cout_revient_to_string():
+    len_nom = 8
+    if DICT_RECETTES == {}:
+        s = "\nAucune recette n'a encore ete cree\n"
+    else:
+        s = "\n-- Cout de revient --\n"
+        for x in DICT_RECETTES:
+            if len(x) > len_nom:
+                len_nom = len(x)
+        contour = "*"*(len_nom+62)+"\n"
+        s += contour + "* " + " "*(len_nom-8) + "Recettes | "
+        s += "Prix unitaire | Prix de vente |   Difference  |    %    *\n"
+        s += "* "+"-"*len_nom + " | ------------- | ------------- | ------------- | ------- *\n"
+        for x in DICT_RECETTES.values():
+            l = x.get_cout_revient()
+            s += "* " + " "*(len_nom - len(x.get_nom())) + x.get_nom() + " |  {:.2f} / ".format(l[0])
+            s += " "*(5-len(x.unite)) + "{} | {:.2f} / ".format(x.unite, x.prix_vente)
+            s += " "*(5-len(x.unite)) + "{} | {:.2f} / ".format(x.unite, l[1])
+            s += " "*(5-len(x.unite)) + "{} |  {:.2f}  *\n".format(x.unite, l[2])
+        s += contour
+    return s
 
 def sauvegarder():
     global DICT_INGREDIENTS
@@ -179,7 +210,7 @@ def sauvegarder():
     f.truncate(0)
     f.close()
     pickle.dump(data, open("data.pickle", "wb"))
-    print("Enregistrement terminé")
+    print("Enregistrement termine")
 
 def charger():
     if os.path.getsize("data.pickle") == 0:
@@ -190,138 +221,20 @@ def charger():
         global DICT_RECETTES
         DICT_INGREDIENTS = data["ing"]
         DICT_RECETTES = data["recette"]
-        print("Chargement terminé")
+        print("Chargement termine")
 
-"""
-def modifier_ingredient():
-    nom_ing = input("Nom de l'ingredient à modifier: ")
-    index = 0
-    for x in range(len(DICT_INGREDIENTS)):
-        if nom_ing == DICT_INGREDIENTS[x].get_nom():
-            index = x
-            break
-    if index == 0:
-       print("Cet ingrédient n'existe pas :(")
-    else:
-        choix = ["NOM","PRIX","UNITE"]
-        champ = input("Quel champ voulez-vous modifier? (Nom, prix ou unite): ").upper()
-        if champ in choix:
-            if champ == "PRIX":
-                while 1:
-                    prix = input("Prix: ")
-                    try:
-                        float(prix)
-                        break
-                    except ValueError:
-                        print("Veuillez entrer un nombre valide")
-                while 1:
-                    qty = input("Quantité pour le prix: ")
-                    try:
-                        float(qty)
-                        DICT_INGREDIENTS[index].set_prix_unite(float(prix), float(qty))
-                        break
-                    except ValueError:
-                        print("Veuillez entrer un nombre valide")
-            elif champ == "UNITE":
-                while 1:
-                    unite = input("L'unité de l'ingrédient (Kg, L ou unité): ")
-                    if unite in ["Kg", "L", "unite"]:
-                        DICT_INGREDIENTS[index].set_unite(unite)
-                        break
-                    else:
-                        print("Veuillez entrer une unité valide (Kg, L ou unité)")
-            else:
-                nom = input("Nouveau nom: ")
-                DICT_INGREDIENTS[index].set_nom(nom)
-            print("-- Modification réussi --")
-
-def supprimer_ingredient():
-    nom = input("Nom de l'ingrédient à supprimer: ")
-    index = 0
-    for x in range (len(DICT_INGREDIENTS)):
-        if nom == DICT_INGREDIENTS[x].get_nom():
-            index = x
-            break
-    if index == 0:
-        print("Aucun ingrédient de ce nom")
-    else:
-        DICT_INGREDIENTS.pop(index)
-        print("Ingredient supprimé")
-
-def creer_recette():
-    #DICT_INGREDIENTS = []
-    print("\n-- Création d'une nouvelle recette --")
-    while 1:
-        nom = input("Nom de la recette: ")
-        existe = False
-
-        for i in LISTE_RECETTES:
-            if nom == i.get_nom():
-                existe = True
-        if existe:
-            print("Il existe déjà une recette portant ce nom... tentative annulée")
-            break
-        else:
-            i = 0
-            while 1:
-                i += 1
-                while 1:
-                    ing = 0
-                    input_ing = input("Nom de l'ingredient "+str(i)+": ")
-                    for x in DICT_INGREDIENTS:
-                        if input_ing == x.get_nom():
-                            ing = x
-                    if ing == 0:
-                        print("Aucun ingredient de ce nom...")
-                    else:
-                        break
-                while 1:
-                    qty = input("Combien de {} ? : ".format(ing.get_unite()))
-                    try:
-                        float(qty)
-                        break
-                    except ValueError:
-                        print("Veuillez entrer un nombre valide")
-                while 1:
-                    #DICT_INGREDIENTS.append([ing,qty])
-                    choix = input("Un autre ingredient à rajouter? (Oui/Non)")
-                    if choix == "Non" or "Oui":
-                        break
-                    else:
-                        print("Input: "+ choix+ " invalide...")
-                if choix == "Non":
-                    break
-        break
-
-    if not existe:
-        while 1:
-            qty_total = input("Quelle est la qantité finale de la recette: ")
-            try:
-                float(qty_total)
-                break
-            except ValueError:
-                print("Veuillez entrer un nombre valide")
-        while 1:
-            unite_total = input("L'unite finale de la recette: ")
-            if unite_total in ["Kg", "L", "unite"]:
-                break
-            else:
-                print("Veuillez entrer une unité valide (Kg, L ou unité)")
-        while 1:
-            prix_vente = input("Quel est le prix de vente: ")
-            try:
-                float(prix_vente)
-                break
-            except ValueError:
-                print("Veuillez entrer un nombre valide")
-        LISTE_RECETTES.append(Recette(nom,DICT_INGREDIENTS,qty_total,unite_total,prix_vente))
-        print("-- Création réussie --")
-
-def afficher_prix_revient():
-    print("- Prix de revient")
-    for x in LISTE_RECETTES:
-        x.print_prix_revient()
-"""
+def imprimer():
+    print("-- Debut de l'ecriture --")
+    file = open("Sortie.txt", "w")
+    file.truncate(0)
+    file.write(ingredients_to_string())
+    file.write("-"*50+"\n")
+    file.write(recette_to_string())
+    file.write("-" * 50 +"\n")
+    file.write(cout_revient_to_string())
+    file.write("-" * 50 +"\n")
+    file.close()
+    print("-- Fin de l'ecriture --")
 
 def quitter():
     while True:

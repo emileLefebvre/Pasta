@@ -1,0 +1,57 @@
+
+-- Ingredients de base --
+1: 1.00/Unite
+Ail hache (huile): 3.85/Kg
+Basilic: 14.11/Kg
+Boeuf: 10.49/Kg
+Canola: 1.80/L
+Carotte: 1.85/Kg
+Celeri: 2.27/Kg
+Champignon: 7.03/Kg
+Ciboulette: 1.98/Unite
+Couvercle plat (COV03): 0.14/Unite
+Couvercle sauce (LFE): 0.09/Unite
+Creme: 3.38/L
+Cup 16 Oz: 0.17/Unite
+Cup 32 Oz: 0.28/Unite
+Cup 8 )z: 0.12/Unite
+Echalotte: 0.82/Unite
+Estragon: 1.82/Unite
+Farine: 0.75/Kg
+Huile d'olive: 6.25/L
+Jus de citron: 6.55/L
+Mangue: 12.33/Kg
+Matouk: 3.31/Kg
+Mayo Hellmann: 6.23/L
+Melange sel-poivre: 1.19/Kg
+Moutarde: 4.98/L
+Oignon: 1.04/Kg
+Oignon congele: 3.11/Kg
+Origano: 25.93/Kg
+Parmesan: 29.35/Kg
+Pate de tomates: 2.31/Kg
+Piment congele: 3.35/Kg
+Piment rondelle: 1.01/Kg
+Plat noir (preswar): 0.24/Unite
+Poitrine poulet: 11.95/Kg
+Poivre: 13.71/Kg
+Poivre cayenne: 21.24/Kg
+Poudre volaille: 5.20/Kg
+Riz: 3.85/Kg
+Sambal oelek: 5.04/Kg
+Sel: 0.47/Kg
+Sucre: 1.39/Kg
+Tomate sechee: 10.83/Kg
+Tomates (Magic): 5.38/Unite
+Tomates (Valoroso): 5.13/Unite
+Veau: 9.30/Kg
+Vin blanc: 1.85/L
+Vinaigre blanc: 1.16/L
+Vodka: 22.86/L
+--------------------------------------------------
+
+Aucune recette n'a encore ete cree
+--------------------------------------------------
+
+Aucune recette n'a encore ete cree
+--------------------------------------------------

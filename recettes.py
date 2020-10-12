@@ -31,7 +31,7 @@ class Recette:
         return round(cout, 2)
 
     def get_cout_revient(self):
-        prix_unitaire = self.get_cout_total() /  self.qty
+        prix_unitaire = self.get_prix_unite()
         diff = self.prix_vente - prix_unitaire
         pour = 100*(self.prix_vente - prix_unitaire)/self.prix_vente
 
@@ -42,6 +42,16 @@ class Recette:
 
     def set_nom(self, nom):
         self.nom = nom
+
+    def get_unite(self):
+        return self.unite
+
+    def get_prix_unite(self):
+        return round(self.get_cout_total() /  self.qty,2)
+
+    def ing_to_string(self):
+        return "{}: {:.2f}/{}".format(self.get_nom(), self.get_cout_total() /  self.qty, self.unite)
+
 
     def to_string(self):
         s= "\n"
