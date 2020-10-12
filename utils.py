@@ -73,7 +73,7 @@ def creer_recette():
 
         qty = demander_float("Quantite totale de la recette: ", 3)
         unite = demander_unite("L'unite de la recette: ")
-        prix_vente = demander_float("Quel est le prix de vente: ", 2)
+        prix_vente = demander_float("Quel est le prix de vente (0 si on vend pas): ", 2)
 
         DICT_RECETTES[nom] = Recette(nom, ing, qty, unite, prix_vente)
         print("-- Creation reussie --")
@@ -190,11 +190,12 @@ def cout_revient_to_string():
         s += "Prix unitaire | Prix de vente |   Difference  |    %    *\n"
         s += "* "+"-"*len_nom + " | ------------- | ------------- | ------------- | ------- *\n"
         for x in DICT_RECETTES.values():
-            l = x.get_cout_revient()
-            s += "* " + " "*(len_nom - len(x.get_nom())) + x.get_nom() + " |  {:.2f} / ".format(l[0])
-            s += " "*(5-len(x.unite)) + "{} | {:.2f} / ".format(x.unite, x.prix_vente)
-            s += " "*(5-len(x.unite)) + "{} | {:.2f} / ".format(x.unite, l[1])
-            s += " "*(5-len(x.unite)) + "{} |  {:.2f}  *\n".format(x.unite, l[2])
+            if x.get_prix_vente() != 0:
+                l = x.get_cout_revient()
+                s += "* " + " "*(len_nom - len(x.get_nom())) + x.get_nom() + " | {:.2f} / ".format(l[0])
+                s += " "*(5-len(x.unite)) + "{} | {:.2f} / ".format(x.unite, x.prix_vente)
+                s += " "*(5-len(x.unite)) + "{} | {:.2f} / ".format(x.unite, l[1])
+                s += " "*(5-len(x.unite)) + "{} | {:.2f}  *\n".format(x.unite, l[2])
         s += contour
     return s
 

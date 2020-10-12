@@ -37,6 +37,9 @@ class Recette:
 
         return [prix_unitaire, diff, pour]
 
+    def get_prix_vente(self):
+        return self.prix_vente
+
     def get_nom(self):
         return self.nom
 
