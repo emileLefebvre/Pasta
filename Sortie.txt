@@ -67,6 +67,7 @@ Risotto tomates sechees: 5.23/Kg
 Sauce a la viande piq: 10.54/Kg
 Sauce a la viande regu: 10.44/Kg
 Sauce base romanoff: 3.03/Kg
+Sauce romanoff: 3.68/Kg
 Sauce tomate & basilic: 1.82/Kg
 Sauce tomates & ail: 1.94/Kg
 Vinaigrette mayo: 6.68/L
@@ -202,6 +203,15 @@ Vinaigrette mayo: 6.68/L
 *              Total | 22.000    Kg | 66.65$ *
 **********************************************
 
+- Sauce romanoff
+********************************************
+* Sauce base romanoff | 10.000 Kg | 30.30$ *
+*               Creme |  1.000  L |  3.38$ *
+*    Parmesan (econo) |  0.200 Kg |  3.13$ *
+* ---------------------------------------- *
+*               Total | 10.000 Kg | 36.81$ *
+********************************************
+
 - Sauce tomate & basilic
 **********************************************
 * Tomates (Valoroso) |  4.000 Unite | 20.52$ *
@@ -250,12 +260,13 @@ Vinaigrette mayo: 6.68/L
 ***************************************************************************************
 *                  Recettes | Prix unitaire | Prix de vente |   Difference  |    %    *
 * ------------------------- | ------------- | ------------- | ------------- | ------- *
-*     Pate fraiche epinards | 1.74 /    Kg | 13.50 /    Kg | 11.76 /    Kg | 87.11  *
-*             Pates fraiche | 1.39 /    Kg | 13.50 /    Kg | 12.11 /    Kg | 89.70  *
-* Poulet citron & estrageon | 3.50 / Unite | 8.75 / Unite | 5.25 / Unite | 60.00  *
-*   Risotto tomates sechees | 5.23 /    Kg | 30.00 /    Kg | 24.77 /    Kg | 82.57  *
-*     Sauce a la viande piq | 10.54 /    Kg | 15.25 /    Kg | 4.71 /    Kg | 30.89  *
-*    Sauce a la viande regu | 10.44 /    Kg | 15.25 /    Kg | 4.81 /    Kg | 31.54  *
-*    Sauce tomate & basilic | 1.82 /    Kg | 13.25 /    Kg | 11.43 /    Kg | 86.26  *
+*     Pate fraiche epinards |  1.74 /    Kg | 13.50 /    Kg | 11.76 /    Kg |  87.11  *
+*             Pates fraiche |  1.39 /    Kg | 13.50 /    Kg | 12.11 /    Kg |  89.70  *
+* Poulet citron & estrageon |  3.50 / Unite |  8.75 / Unite |  5.25 / Unite |  60.00  *
+*   Risotto tomates sechees |  5.23 /    Kg | 30.00 /    Kg | 24.77 /    Kg |  82.57  *
+*     Sauce a la viande piq | 10.54 /    Kg | 15.25 /    Kg |  4.71 /    Kg |  30.89  *
+*    Sauce a la viande regu | 10.44 /    Kg | 15.25 /    Kg |  4.81 /    Kg |  31.54  *
+*            Sauce romanoff |  3.68 /    Kg | 17.50 /    Kg | 13.82 /    Kg |  78.97  *
+*    Sauce tomate & basilic |  1.82 /    Kg | 13.25 /    Kg | 11.43 /    Kg |  86.26  *
 ***************************************************************************************
 --------------------------------------------------

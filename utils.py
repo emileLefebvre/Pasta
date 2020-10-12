@@ -192,10 +192,10 @@ def cout_revient_to_string():
         for x in DICT_RECETTES.values():
             if x.get_prix_vente() != 0:
                 l = x.get_cout_revient()
-                s += "* " + " "*(len_nom - len(x.get_nom())) + x.get_nom() + " | {:.2f} / ".format(l[0])
-                s += " "*(5-len(x.unite)) + "{} | {:.2f} / ".format(x.unite, x.prix_vente)
-                s += " "*(5-len(x.unite)) + "{} | {:.2f} / ".format(x.unite, l[1])
-                s += " "*(5-len(x.unite)) + "{} | {:.2f}  *\n".format(x.unite, l[2])
+                s += "* " + " "*(len_nom - len(x.get_nom())) + x.get_nom() + " | {:>5.2f} / ".format(l[0])
+                s += " "*(5-len(x.unite)) + "{} | {:>5.2f} / ".format(x.unite, x.prix_vente)
+                s += " "*(5-len(x.unite)) + "{} | {:>5.2f} / ".format(x.unite, l[1])
+                s += " "*(5-len(x.unite)) + "{} |  {:>5.2f}  *\n".format(x.unite, l[2])
         s += contour
     return s
 
