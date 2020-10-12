@@ -59,6 +59,7 @@ Vinaigre blanc: 1.16/L
 Vodka: 22.86/L
 
 -- Ingredients (recette) --
+Cann. veau frais: 0.34/Unite
 Farce au veau: 7.67/Kg
 Matouk: 3.31/Kg
 Pate fraiche epinards: 1.74/Kg
@@ -75,6 +76,14 @@ Vinaigrette mayo: 6.68/L
 --------------------------------------------------
 
 -- Recettes --
+
+- Cann. veau frais
+***************************************
+* Pates fraiche | 0.023    Kg | 0.03$ *
+* Farce au veau | 0.040    Kg | 0.31$ *
+* ----------------------------------- *
+*         Total | 1.000 Unite | 0.34$ *
+***************************************
 
 - Farce au veau
 ******************************************
@@ -142,20 +151,20 @@ Vinaigrette mayo: 6.68/L
 ***********************************************
 
 - Risotto tomates sechees
-*************************************************
-*                    Riz | 1.500    Kg |  5.78$ *
-*              Vin blanc | 0.375     L |  0.69$ *
-*               Parmesan | 0.600    Kg | 17.61$ *
-*             Champignon | 0.800    Kg |  5.62$ *
-*          Tomate sechee | 0.400    Kg |  4.33$ *
-*              Echalotte | 1.000 Unite |  0.82$ *
-*                 Oignon | 0.500    Kg |  0.52$ *
-*                 Poivre | 0.020    Kg |  0.27$ *
+**************************************************
+*                    Riz |  1.500    Kg |  5.78$ *
+*              Vin blanc |  0.375     L |  0.69$ *
+*               Parmesan |  0.600    Kg | 17.61$ *
+*             Champignon |  0.800    Kg |  5.62$ *
+*          Tomate sechee |  0.400    Kg |  4.33$ *
+*              Echalotte |  1.000 Unite |  0.82$ *
+*                 Oignon |  0.500    Kg |  0.52$ *
+*                 Poivre |  0.020    Kg |  0.27$ *
 *    Plat noir (preswar) | 30.000 Unite |  7.20$ *
 * Couvercle plat (COV03) | 30.000 Unite |  4.20$ *
-* --------------------------------------------- *
-*                  Total | 9.000    Kg | 47.05$ *
-*************************************************
+* ---------------------------------------------- *
+*                  Total | 9.000     Kg | 47.05$ *
+**************************************************
 
 - Sauce a la viande piq
 **************************************************
@@ -277,6 +286,7 @@ Vinaigrette mayo: 6.68/L
 ***************************************************************************************
 *                  Recettes | Prix unitaire | Prix de vente |   Difference  |    %    *
 * ------------------------- | ------------- | ------------- | ------------- | ------- *
+*          Cann. veau frais |  0.34 / Unite |  3.98 / Unite |  3.64 / Unite |  91.46  *
 *     Pate fraiche epinards |  1.74 /    Kg | 13.50 /    Kg | 11.76 /    Kg |  87.11  *
 *             Pates fraiche |  1.39 /    Kg | 13.50 /    Kg | 12.11 /    Kg |  89.70  *
 * Poulet citron & estrageon |  3.50 / Unite |  8.75 / Unite |  5.25 / Unite |  60.00  *
