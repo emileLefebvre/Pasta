@@ -43,6 +43,9 @@ class Recette:
     def get_nom(self):
         return self.nom
 
+    def get_ingredients(self):
+        return self.liste_ingredients
+
     def set_nom(self, nom):
         self.nom = nom
 
@@ -52,9 +55,11 @@ class Recette:
     def get_prix_unite(self):
         return round(self.get_cout_total() /  self.qty,2)
 
+    def get_prix_unite(self):
+        return round(self.get_cout_total() /  self.qty,2)
+
     def ing_to_string(self):
         return "{}: {:.2f}/{}".format(self.get_nom(), self.get_cout_total() /  self.qty, self.unite)
-
 
     def to_string(self):
         s= "\n"

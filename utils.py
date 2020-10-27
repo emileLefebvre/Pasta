@@ -22,8 +22,50 @@ def creer_ingredient():
 
 
         DICT_INGREDIENTS[nom] = Ingredient(nom, prix, qty, unite)
-        DICT_INGREDIENTS = dict(sort_dict_by_key(DICT_INGREDIENTS))
+        DICT_INGREDIENTS = sort_dict_by_key(DICT_INGREDIENTS)
         print("-- Creation reussie --")
+
+def modifier_ingredient():
+    global DICT_INGREDIENTS
+    print("\n-- Modification d'un ingredients --")
+    nom = input("Nom de l'ingredient a modifier: ")
+    if nom not in DICT_INGREDIENTS:
+        print("Il n'existe pas d'ingredient de ce nom. Modification annulee.")
+    else:
+        while True:
+            champ = input("Quel champ (Nom, Prix, Unite) voulez vous modifie:  ")
+            if champ not in ["Nom", "Prix", "Unite"]:
+                print("Champ invalide")
+            else:
+                break
+        if champ == "Unite":
+            unite = demander_unite("Nouvelle unite: ")
+            DICT_INGREDIENTS[nom].set_unite(unite)
+            for x in DICT_RECETTES.values():
+                for y in x.get_ingredients():
+                    if y[0].get_nom() == nom:
+                        y[0].set_unite(unite)
+        elif champ == "Prix":
+            prix = demander_float("Nouveau prix: ", 2)
+            qty = demander_float("Nouvelle quantite ({}): ".format(DICT_INGREDIENTS[nom].get_unite()), 3)
+            DICT_INGREDIENTS[nom].set_prix_unite(prix, qty)
+            for x in DICT_RECETTES.values():
+                for y in x.get_ingredients():
+                    if y[0].get_nom() == nom:
+                        y[0].set_prix_unite(prix, qty)
+        else:
+            n_nom = input("Nouveau nom: ")
+            DICT_INGREDIENTS[nom].set_nom(n_nom)
+            DICT_INGREDIENTS[n_nom] = DICT_INGREDIENTS.pop(nom)
+
+            for x in DICT_RECETTES.values():
+                for y in x.get_ingredients():
+                    if y[0].get_nom() == nom:
+                        y[0].set_nom(n_nom)
+
+        DICT_INGREDIENTS = sort_dict_by_key(DICT_INGREDIENTS)
+        print("-- Modification reussi --")
+
 
 def sort_dict_by_key(d):
 
@@ -94,6 +136,7 @@ def afficher_menu():
           "0: Quitter\n"
           "1: Creer un ingredient\n"
           "2: Creer une recette\n"
+          "3: Modifier un ingredient\n"
           "4: Afficher les ingredients\n"
           "5: Afficher les recettes\n"
           "6: Afficher les couts de revient\n"
@@ -112,6 +155,8 @@ def menu():
                 creer_ingredient()
             elif int(choix) == 2:
                 creer_recette()
+            elif int(choix) == 3:
+                modifier_ingredient()
             elif int(choix) == 4:
                 afficher_ingredients()
             elif int(choix) == 5:
@@ -203,8 +248,8 @@ def sauvegarder():
     global DICT_INGREDIENTS
     global DICT_RECETTES
 
-    DICT_INGREDIENTS = dict(sort_dict_by_key(DICT_INGREDIENTS))
-    DICT_RECETTES = dict(sort_dict_by_key(DICT_RECETTES))
+    DICT_INGREDIENTS = sort_dict_by_key(DICT_INGREDIENTS)
+    DICT_RECETTES = sort_dict_by_key(DICT_RECETTES)
 
     data = {"ing" : DICT_INGREDIENTS, "recette" : DICT_RECETTES}
     f = open("data.pickle", "r+")
