@@ -1,0 +1,299 @@
+
+-- Ingredients de base --
+1: 1.00/Unite
+Ail hache (huile): 3.85/Kg
+Basilic: 14.11/Kg
+Boeuf: 10.49/Kg
+Canola: 1.80/L
+Carotte: 1.85/Kg
+Celeri: 2.27/Kg
+Champignon: 7.03/Kg
+Chapelure: 6.14/Kg
+Ciboulette: 1.98/Unite
+Couvercle plat (COV03): 0.14/Unite
+Couvercle sauce (LFE): 0.09/Unite
+Creme: 3.38/L
+Cup 16 Oz: 0.17/Unite
+Cup 32 Oz: 0.28/Unite
+Cup 8 )z: 0.12/Unite
+Echalotte: 0.82/Unite
+Epinards congele: 4.24/Kg
+Estragon: 1.82/Unite
+Farine: 0.75/Kg
+Fromage (moza): 12.38/Kg
+Huile d'olive: 6.25/L
+Jambon braise: 1.64/Kg
+Jus de citron: 6.55/L
+Mangue: 12.33/Kg
+Marjolaine: 24.44/Kg
+Matouk: 3.31/Kg
+Mayo Hellmann: 6.23/L
+Melange sel-poivre: 1.19/Kg
+Moutarde: 4.98/L
+Oeuf congele: 5.09/L
+Oeuf liquide: 4.47/L
+Oignon: 1.04/Kg
+Oignon congele: 3.11/Kg
+Origano: 25.93/Kg
+Parmesan: 29.35/Kg
+Parmesan (econo): 15.63/Kg
+Pate de tomates: 2.31/Kg
+Piment congele: 3.35/Kg
+Piment rondelle: 1.01/Kg
+Plat noir (preswar): 0.24/Unite
+Poitrine poulet: 11.95/Kg
+Poivre: 13.71/Kg
+Poivre cayenne: 21.24/Kg
+Poudre volaille: 5.20/Kg
+Riz: 3.85/Kg
+Sambal oelek: 5.04/Kg
+Sel: 0.47/Kg
+Semoule: 1.05/Kg
+Sucre: 1.39/Kg
+Tomate sechee: 10.83/Kg
+Tomates (Magic): 5.38/Unite
+Tomates (Valoroso): 5.13/Unite
+Veau: 9.30/Kg
+Vin blanc: 1.85/L
+Vinaigre blanc: 1.16/L
+Vodka: 22.86/L
+
+-- Ingredients (recette) --
+Cann. veau frais: 0.34/Unite
+Farce au veau: 7.67/Kg
+Matouk: 3.31/Kg
+Pate fraiche epinards: 1.74/Kg
+Pates fraiche: 1.39/Kg
+Poulet citron & estrageon: 3.50/Unite
+Risotto tomates sechees: 5.23/Kg
+Sauce a la viande piq: 10.54/Kg
+Sauce a la viande regu: 10.44/Kg
+Sauce base romanoff: 3.03/Kg
+Sauce romanoff: 3.68/Kg
+Sauce tomate & basilic: 1.82/Kg
+Sauce tomates & ail: 1.94/Kg
+Vinaigrette mayo: 6.68/L
+--------------------------------------------------
+
+-- Recettes --
+
+- Cann. veau frais
+***************************************
+* Pates fraiche | 0.023    Kg | 0.03$ *
+* Farce au veau | 0.040    Kg | 0.31$ *
+* ----------------------------------- *
+*         Total | 1.000 Unite | 0.34$ *
+***************************************
+
+- Farce au veau
+******************************************
+*             Veau | 10.000 Kg |  93.00$ *
+*    Jambon braise |  1.600 Kg |   2.62$ *
+* Epinards congele |  2.600 Kg |  11.02$ *
+* Parmesan (econo) |  0.300 Kg |   4.69$ *
+*           Oignon |  0.500 Kg |   0.52$ *
+*        Chapelure |  0.400 Kg |   2.46$ *
+*           Farine |  0.200 Kg |   0.15$ *
+*           Poivre |  0.008 Kg |   0.11$ *
+*              Sel |  0.020 Kg |   0.01$ *
+*       Marjolaine |  0.020 Kg |   0.49$ *
+* -------------------------------------- *
+*            Total | 15.000 Kg | 115.07$ *
+******************************************
+
+- Matouk
+****************************************
+*            Mangue | 0.500 Kg | 6.17$ *
+*   Piment rondelle | 1.000 Kg | 1.01$ *
+*             Sucre | 0.100 Kg | 0.14$ *
+* Ail hache (huile) | 0.025 Kg | 0.10$ *
+*            Oignon | 0.300 Kg | 0.31$ *
+*    Poivre cayenne | 0.010 Kg | 0.21$ *
+*          Moutarde | 0.075  L | 0.37$ *
+*      Sambal oelek | 0.125 Kg | 0.63$ *
+* ------------------------------------ *
+*             Total | 2.700 Kg | 8.94$ *
+****************************************
+
+- Pate fraiche epinards
+***************************************
+*          Semoule | 4.500 Kg | 4.73$ *
+*              Sel | 0.030 Kg | 0.01$ *
+* Epinards congele | 0.800 Kg | 3.39$ *
+*     Oeuf liquide | 0.265  L | 1.18$ *
+*     Oeuf congele | 0.050  L | 0.25$ *
+* ----------------------------------- *
+*            Total | 5.500 Kg | 9.57$ *
+***************************************
+
+- Pates fraiche
+*************************************
+*      Semoule |  8.000 Kg |  8.40$ *
+*          Sel |  0.045 Kg |  0.02$ *
+* Oeuf liquide |  1.000  L |  4.47$ *
+* Oeuf congele |  0.200  L |  1.02$ *
+* --------------------------------- *
+*        Total | 10.000 Kg | 13.91$ *
+*************************************
+
+- Poulet citron & estrageon
+***********************************************
+*    Poitrine poulet | 10.000    Kg | 119.50$ *
+*             Oignon |  1.000    Kg |   1.04$ *
+*              Creme |  3.000     L |  10.14$ *
+*           Estragon |  2.000 Unite |   3.64$ *
+*    Poudre volaille |  0.100    Kg |   0.52$ *
+*          Vin blanc |  0.600     L |   1.11$ *
+*      Jus de citron |  0.600     L |   3.93$ *
+* Melange sel-poivre |  0.040    Kg |   0.05$ *
+* ------------------------------------------- *
+*              Total | 40.000 Unite | 139.93$ *
+***********************************************
+
+- Risotto tomates sechees
+*************************************************
+*                    Riz | 1.500    Kg |  5.78$ *
+*              Vin blanc | 0.375     L |  0.69$ *
+*               Parmesan | 0.600    Kg | 17.61$ *
+*             Champignon | 0.800    Kg |  5.62$ *
+*          Tomate sechee | 0.400    Kg |  4.33$ *
+*              Echalotte | 1.000 Unite |  0.82$ *
+*                 Oignon | 0.500    Kg |  0.52$ *
+*                 Poivre | 0.020    Kg |  0.27$ *
+*    Plat noir (preswar) | 30.000 Unite |  7.20$ *
+* Couvercle plat (COV03) | 30.000 Unite |  4.20$ *
+* --------------------------------------------- *
+*                  Total | 9.000    Kg | 47.05$ *
+*************************************************
+
+- Sauce a la viande piq
+**************************************************
+*                 Boeuf |  5.000    Kg |  52.45$ *
+*                  Veau |  5.000    Kg |  46.50$ *
+*                Celeri |  1.200    Kg |   2.72$ *
+*        Oignon congele |  2.000    Kg |   6.22$ *
+*        Piment congele |  1.000    Kg |   3.35$ *
+*    Tomates (Valoroso) |  3.000 Unite |  15.39$ *
+*       Tomates (Magic) |  3.000 Unite |  16.14$ *
+*       Pate de tomates |  1.500    Kg |   3.46$ *
+*                   Sel |  0.150    Kg |   0.07$ *
+*                Poivre |  0.030    Kg |   0.41$ *
+*                 Sucre |  0.200    Kg |   0.28$ *
+*               Origano |  0.020    Kg |   0.52$ *
+*               Basilic |  0.020    Kg |   0.28$ *
+*        Poivre cayenne |  0.060    Kg |   1.27$ *
+*                Matouk |  0.200    Kg |   0.66$ *
+*     Ail hache (huile) |  0.150    Kg |   0.58$ *
+* Couvercle sauce (LFE) | 30.000 Unite |   2.70$ *
+*             Cup 16 Oz | 30.000 Unite |   5.10$ *
+* ---------------------------------------------- *
+*                 Total | 15.000    Kg | 158.11$ *
+**************************************************
+
+- Sauce a la viande regu
+**************************************************
+* Couvercle sauce (LFE) | 30.000 Unite |   2.70$ *
+*             Cup 16 Oz | 30.000 Unite |   5.10$ *
+*                 Boeuf |  5.000    Kg |  52.45$ *
+*                  Veau |  5.000    Kg |  46.50$ *
+*                Celeri |  1.200    Kg |   2.72$ *
+*        Oignon congele |  2.000    Kg |   6.22$ *
+*        Piment congele |  1.000    Kg |   3.35$ *
+*       Tomates (Magic) |  3.000 Unite |  16.14$ *
+*    Tomates (Valoroso) |  3.000 Unite |  15.39$ *
+*       Pate de tomates |  1.500    Kg |   3.46$ *
+*                   Sel |  0.090    Kg |   0.04$ *
+*                Poivre |  0.030    Kg |   0.41$ *
+*                 Sucre |  0.200    Kg |   0.28$ *
+*               Origano |  0.040    Kg |   1.04$ *
+*               Basilic |  0.020    Kg |   0.28$ *
+*     Ail hache (huile) |  0.130    Kg |   0.50$ *
+* ---------------------------------------------- *
+*                 Total | 15.000    Kg | 156.59$ *
+**************************************************
+
+- Sauce base romanoff
+**********************************************
+*     Oignon congele |  1.000    Kg |  3.11$ *
+*             Celeri |  5.000    Kg | 11.35$ *
+*            Carotte |  1.000    Kg |  1.85$ *
+* Tomates (Valoroso) |  8.000 Unite | 41.04$ *
+*    Pate de tomates |  0.625    Kg |  1.44$ *
+*             Poivre |  0.025    Kg |  0.34$ *
+*                Sel |  0.100    Kg |  0.05$ *
+*              Sucre |  0.250    Kg |  0.35$ *
+*            Basilic |  0.050    Kg |  0.71$ *
+*          Vin blanc |  0.375     L |  0.69$ *
+*              Vodka |  0.250     L |  5.71$ *
+* ------------------------------------------ *
+*              Total | 22.000    Kg | 66.65$ *
+**********************************************
+
+- Sauce romanoff
+********************************************
+* Sauce base romanoff | 10.000 Kg | 30.30$ *
+*               Creme |  1.000  L |  3.38$ *
+*    Parmesan (econo) |  0.200 Kg |  3.13$ *
+* ---------------------------------------- *
+*               Total | 10.000 Kg | 36.81$ *
+********************************************
+
+- Sauce tomate & basilic
+**********************************************
+* Tomates (Valoroso) |  4.000 Unite | 20.52$ *
+*    Tomates (Magic) |  3.000 Unite | 16.14$ *
+*    Pate de tomates |  0.400    Kg |  0.92$ *
+*            Basilic |  0.030    Kg |  0.42$ *
+*  Ail hache (huile) |  0.240    Kg |  0.92$ *
+*             Poivre |  0.030    Kg |  0.41$ *
+*                Sel |  0.110    Kg |  0.05$ *
+*              Sucre |  0.400    Kg |  0.56$ *
+* ------------------------------------------ *
+*              Total | 22.000    Kg | 39.95$ *
+**********************************************
+
+- Sauce tomates & ail
+**********************************************
+*     Piment congele |  0.400    Kg |  1.34$ *
+*     Oignon congele |  0.600    Kg |  1.87$ *
+*             Celeri |  0.400    Kg |  0.91$ *
+*  Ail hache (huile) |  0.160    Kg |  0.62$ *
+* Tomates (Valoroso) |  4.000 Unite | 20.52$ *
+*    Tomates (Magic) |  3.000 Unite | 16.14$ *
+*    Pate de tomates |  0.320    Kg |  0.74$ *
+*                Sel |  0.080    Kg |  0.04$ *
+*             Poivre |  0.020    Kg |  0.27$ *
+*              Sucre |  0.200    Kg |  0.28$ *
+* ------------------------------------------ *
+*              Total | 22.000    Kg | 42.72$ *
+**********************************************
+
+- Vinaigrette mayo
+*****************************************
+*     Mayo Hellmann | 4.000  L | 24.92$ *
+*          Moutarde | 0.120  L |  0.60$ *
+* Ail hache (huile) | 0.100 Kg |  0.39$ *
+*             Sucre | 0.300 Kg |  0.42$ *
+*    Vinaigre blanc | 0.300  L |  0.35$ *
+*            Poivre | 0.005 Kg |  0.07$ *
+*               Sel | 0.010 Kg |  0.00$ *
+* ------------------------------------- *
+*             Total | 4.000  L | 26.74$ *
+*****************************************
+--------------------------------------------------
+
+-- Cout de revient --
+***************************************************************************************
+*                  Recettes | Prix unitaire | Prix de vente |   Difference  |    %    *
+* ------------------------- | ------------- | ------------- | ------------- | ------- *
+*          Cann. veau frais |  0.34 / Unite |  3.98 / Unite |  3.64 / Unite |  91.46  *
+*     Pate fraiche epinards |  1.74 /    Kg | 13.50 /    Kg | 11.76 /    Kg |  87.11  *
+*             Pates fraiche |  1.39 /    Kg | 13.50 /    Kg | 12.11 /    Kg |  89.70  *
+* Poulet citron & estrageon |  3.50 / Unite |  8.75 / Unite |  5.25 / Unite |  60.00  *
+*   Risotto tomates sechees |  5.23 /    Kg | 30.00 /    Kg | 24.77 /    Kg |  82.57  *
+*     Sauce a la viande piq | 10.54 /    Kg | 15.25 /    Kg |  4.71 /    Kg |  30.89  *
+*    Sauce a la viande regu | 10.44 /    Kg | 15.25 /    Kg |  4.81 /    Kg |  31.54  *
+*            Sauce romanoff |  3.68 /    Kg | 17.50 /    Kg | 13.82 /    Kg |  78.97  *
+*    Sauce tomate & basilic |  1.82 /    Kg | 13.25 /    Kg | 11.43 /    Kg |  86.26  *
+***************************************************************************************
+--------------------------------------------------

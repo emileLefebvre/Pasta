@@ -42,7 +42,7 @@ def modifier_ingredient():
             unite = demander_unite("Nouvelle unite: ")
             DICT_INGREDIENTS[nom].set_unite(unite)
             for x in DICT_RECETTES.values():
-                for y in x.get_ingredients():
+                for y in x.get_liste_ingredients():
                     if y[0].get_nom() == nom:
                         y[0].set_unite(unite)
         elif champ == "Prix":
@@ -50,7 +50,7 @@ def modifier_ingredient():
             qty = demander_float("Nouvelle quantite ({}): ".format(DICT_INGREDIENTS[nom].get_unite()), 3)
             DICT_INGREDIENTS[nom].set_prix_unite(prix, qty)
             for x in DICT_RECETTES.values():
-                for y in x.get_ingredients():
+                for y in x.get_liste_ingredients():
                     if y[0].get_nom() == nom:
                         y[0].set_prix_unite(prix, qty)
         else:
@@ -59,13 +59,12 @@ def modifier_ingredient():
             DICT_INGREDIENTS[n_nom] = DICT_INGREDIENTS.pop(nom)
 
             for x in DICT_RECETTES.values():
-                for y in x.get_ingredients():
+                for y in x.get_liste_ingredients():
                     if y[0].get_nom() == nom:
                         y[0].set_nom(n_nom)
 
         DICT_INGREDIENTS = sort_dict_by_key(DICT_INGREDIENTS)
         print("-- Modification reussi --")
-
 
 def sort_dict_by_key(d):
 
@@ -120,6 +119,17 @@ def creer_recette():
         DICT_RECETTES[nom] = Recette(nom, ing, qty, unite, prix_vente)
         print("-- Creation reussie --")
 
+def modifier_recette():
+    print("-- Modification d'une recette --")
+    nom = input("Nom de la recette a modifier: ")
+    if nom not in DICT_RECETTES:
+        print("Aucune recette de ce nom. Modification annulee")
+    else:
+        l_depart = DICT_RECETTES[nom].get_liste_ingredients()
+        l = demander_ingredient(1)
+        l_depart.append(l)
+        DICT_RECETTES[nom].set_liste_ingredients(l_depart)
+
 def recette_to_string():
     s = ""
     if DICT_RECETTES != {}:
@@ -133,16 +143,17 @@ def recette_to_string():
 #Partie exclusivement utils
 def afficher_menu():
     print("\n-------- Menu --------\n"
-          "0: Quitter\n"
-          "1: Creer un ingredient\n"
-          "2: Creer une recette\n"
-          "3: Modifier un ingredient\n"
-          "4: Afficher les ingredients\n"
-          "5: Afficher les recettes\n"
-          "6: Afficher les couts de revient\n"
-          "7: Imprimer\n"
-          "8: Charger\n"
-          "9: Sauvegarder")
+          " 0: Quitter\n"
+          " 1: Creer un ingredient\n"
+          " 2: Creer une recette\n"
+          " 3: Modifier un ingredient\n"
+          " 4: Afficher les ingredients\n"
+          " 5: Afficher les recettes\n"
+          " 6: Afficher les couts de revient\n"
+          " 7: Imprimer\n"
+          " 8: Charger\n"
+          " 9: Sauvegarder\n"
+          "10: Modifier recette")
 
 def menu():
     afficher_menu()
@@ -169,6 +180,8 @@ def menu():
                 charger()
             elif int(choix) == 9:
                 sauvegarder()
+            elif int(choix) == 10:
+                modifier_recette()
             else:
                 print("Choix pas valide :(")
             afficher_menu()
@@ -250,7 +263,7 @@ def sauvegarder():
 
     DICT_INGREDIENTS = sort_dict_by_key(DICT_INGREDIENTS)
     DICT_RECETTES = sort_dict_by_key(DICT_RECETTES)
-
+    #DICT_RECETTES = {} #pour reset juste les recettes
     data = {"ing" : DICT_INGREDIENTS, "recette" : DICT_RECETTES}
     f = open("data.pickle", "r+")
     f.truncate(0)
