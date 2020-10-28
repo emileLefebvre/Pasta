@@ -25,6 +25,9 @@ class Recette:
     def get_prix_vente(self):
         return self.prix_vente
 
+    def set_prix_vente(self, n_prix):
+        self.prix_vente = n_prix
+
     def get_nom(self):
         return self.nom
 

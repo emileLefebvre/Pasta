@@ -129,6 +129,26 @@ def modifier_recette():
         l = demander_ingredient(1)
         l_depart.append(l)
         DICT_RECETTES[nom].set_liste_ingredients(l_depart)
+        print("-- Modification reussi --\n")
+
+def supprimer_recette():
+    print("\n-- Supprimer une recette --")
+    nom = input("Nom de la recette a supprimer: ")
+    if nom not in DICT_RECETTES:
+        print("Aucune recette de ce nom. Rien a supprimer")
+    else:
+        del DICT_RECETTES[nom]
+        print("-- Recette supprimee --")
+
+def modifier_prix_vente_recette():
+    print("\n-- Modification du prix de vente d'une recette --")
+    nom = input("Nom de la recette a modifier: ")
+    if nom not in DICT_RECETTES:
+        print("Aucune recette de ce nom. Modification annulee")
+    else:
+        n_prix = demander_float("Nouveau prix de vente: ", 2)
+        DICT_RECETTES[nom].set_prix_vente(n_prix)
+        print("-- Modification reussi --\n")
 
 def recette_to_string():
     s = ""
@@ -153,7 +173,9 @@ def afficher_menu():
           " 7: Imprimer\n"
           " 8: Charger\n"
           " 9: Sauvegarder\n"
-          "10: Modifier recette")
+          "10: Modifier recette\n"
+          "11: Supprimer une recette\n"
+          "12: Modifier le prix de vente d'une recette")
 
 def menu():
     afficher_menu()
@@ -182,6 +204,10 @@ def menu():
                 sauvegarder()
             elif int(choix) == 10:
                 modifier_recette()
+            elif int(choix) == 11:
+                supprimer_recette()
+            elif int(choix) == 12:
+                modifier_prix_vente_recette()
             else:
                 print("Choix pas valide :(")
             afficher_menu()
