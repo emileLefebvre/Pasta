@@ -31,6 +31,9 @@ class Recette:
     def get_nom(self):
         return self.nom
 
+    def set_qty(self, qty):
+        self.qty = qty
+
     def get_liste_ingredients(self):
         return self.liste_ingredients
 

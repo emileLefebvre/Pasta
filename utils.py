@@ -150,6 +150,17 @@ def modifier_prix_vente_recette():
         DICT_RECETTES[nom].set_prix_vente(n_prix)
         print("-- Modification reussi --\n")
 
+def modifier_quantite_recette():
+    print("\n-- Modification dde la quantite d'une recette --")
+    nom = input("Nom de la recette a modifier: ")
+    if nom not in DICT_RECETTES:
+        print("Aucune recette de ce nom. Modification annulee")
+    else:
+
+        n_qty = demander_float("Nouvelle qantite ({}): ".format(DICT_RECETTES[nom].get_unite()), 3)
+        DICT_RECETTES[nom].set_qty(n_qty)
+        print("-- Modification reussi --\n")
+
 def recette_to_string():
     s = ""
     if DICT_RECETTES != {}:
@@ -175,7 +186,8 @@ def afficher_menu():
           " 9: Sauvegarder\n"
           "10: Modifier recette\n"
           "11: Supprimer une recette\n"
-          "12: Modifier le prix de vente d'une recette")
+          "12: Modifier le prix de vente d'une recette\n"
+          "13: Modifier quantite d'une recette")
 
 def menu():
     afficher_menu()
@@ -208,6 +220,8 @@ def menu():
                 supprimer_recette()
             elif int(choix) == 12:
                 modifier_prix_vente_recette()
+            elif int(choix) == 13:
+                modifier_quantite_recette()
             else:
                 print("Choix pas valide :(")
             afficher_menu()
@@ -271,7 +285,7 @@ def cout_revient_to_string():
                 len_nom = len(x)
         contour = "*"*(len_nom+62)+"\n"
         s += contour + "* " + " "*(len_nom-8) + "Recettes | "
-        s += "Prix unitaire | Prix de vente |   Difference  |    %    *\n"
+        s += "Cout unitaire | Prix de vente |   Difference  |    %    *\n"
         s += "* "+"-"*len_nom + " | ------------- | ------------- | ------------- | ------- *\n"
         for x in DICT_RECETTES.values():
             if x.get_prix_vente() != 0:
@@ -301,7 +315,7 @@ def charger():
     if os.path.getsize("data.pickle") == 0:
         print("Chargement impossible... fichier vide")
     else:
-        data = pickle.load(open("data.pickle", "rb"))
+        data = pickle.load(open("data.pickle","rb"))
         global DICT_INGREDIENTS
         global DICT_RECETTES
         DICT_INGREDIENTS = data["ing"]

@@ -9,13 +9,14 @@ Canola: 1.80/L
 Carotte congele: 1.85/Kg
 Celeri congele: 2.27/Kg
 Champignon: 7.03/Kg
-Chapelure: 6.14/Kg
+Chapelure: 4.04/Kg
 Cheddar (irlandais): 23.95/Kg
 Chou-fleur frais: 25.93/Unite
 Ciboulette: 1.98/Unite
 Couvercle plat (COV03): 0.14/Unite
 Couvercle sauce (LFE): 0.09/Unite
 Creme: 3.38/L
+Crevettes congele: 22.83/Kg
 Cup 16 Oz: 0.17/Unite
 Cup 32 Oz: 0.28/Unite
 Cup 8 )z: 0.12/Unite
@@ -23,6 +24,9 @@ Echalotte: 0.82/Unite
 Epinards congele: 4.24/Kg
 Estragon: 1.82/Unite
 Farine: 0.75/Kg
+Fecule de mais: 1.54/Kg
+Fenouil: 23.14/Kg
+Fines herbes: 27.53/Kg
 Fromage (moza): 12.38/Kg
 Fumet de poisson: 35.79/Kg
 Huile d'olive: 6.25/L
@@ -45,19 +49,25 @@ Oeufs entier: 0.26/Unite
 Oignon: 1.04/Kg
 Oignon congele: 3.11/Kg
 Origano: 25.93/Kg
+Palourdes: 2.14/Unite
 Parmesan: 29.35/Kg
 Parmesan (econo): 15.63/Kg
 Patates (puree): 8.24/Unite
 Pate de tomates: 2.31/Kg
+Persil: 35.00/Kg
+Petoncles congele: 15.95/Kg
 Piment rondelle: 1.01/Kg
 Plat noir (preswar): 0.24/Unite
+Poireaux congele: 2.69/Kg
 Poitrine poulet: 11.95/Kg
 Poivre: 13.71/Kg
 Poivre cayenne: 21.24/Kg
 Poivron congele: 3.35/Kg
+Poudre de cari: 4.50/Kg
 Poudre volaille: 5.20/Kg
 Ricotta: 25.77/Unite
 Riz: 3.85/Kg
+Romarin: 28.38/Kg
 Sambal oelek: 5.04/Kg
 Saumon congele: 15.25/Kg
 Sel: 0.47/Kg
@@ -70,6 +80,7 @@ Veau: 9.95/Kg
 Vin blanc: 1.85/L
 Vinaigre blanc: 1.16/L
 Vodka: 22.86/L
+Zucchinis frais: 3.57/Kg
 
 -- Ingredients (recette) --
 Cann. fromage frais: 0.67/Unite
@@ -78,20 +89,29 @@ Cann. veau basilic: 1.72/Unite
 Cann. veau frais: 0.39/Unite
 Cann. veau romanoff: 2.09/Unite
 Canolive: 2.91/L
+Coquillages saumon (plat): 2.17/Unite
+Coquillages saumon (recette): 4.79/Kg
+Epices fruits de mer: 19.75/Kg
 Farce au fromage: 15.95/Kg
-Farce au veau: 9.00/Kg
+Farce au veau: 8.94/Kg
 Gratin de chou-fleur: 2.61/Unite
 Matouk: 3.31/Kg
 Pate au saumon: 3.95/Unite
 Pate chinois: 2.12/Unite
 Pates fraiches: 1.39/Kg
 Pates fraiches (epinard): 1.74/Kg
+Poulet cari (plat): 1.77/Unite
+Poulet cari (recette): 3.63/Kg
 Poulet citron & estragon: 3.50/Unite
 Risotto aux tomates sechees: 3.96/Kg
 Sauce a la viande piq: 9.72/Kg
 Sauce a la viande regu: 9.62/Kg
+Sauce aux fruits de mer: 7.94/Kg
+Sauce aux legumes: 2.59/Kg
+Sauce aux palourdes: 4.68/Kg
 Sauce base romanoff: 3.03/Kg
 Sauce romanoff: 3.68/Kg
+Sauce rosa: 3.33/Kg
 Sauce tomates & ail: 1.94/Kg
 Sauce tomates & basilic: 1.82/Kg
 Vinaigrette mayo: 6.68/L
@@ -153,6 +173,45 @@ Vinaigrette mayo: 6.68/L
 *         Total | 4.000 L | 11.65$ *
 ************************************
 
+- Coquillages saumon (plat)
+******************************************************
+* Coquillages saumon (recette) | 0.350    Kg | 1.68$ *
+*               Fromage (moza) | 0.040    Kg | 0.50$ *
+* -------------------------------------------------- *
+*                        Total | 1.000 Unite | 2.17$ *
+******************************************************
+
+- Coquillages saumon (recette)
+******************************************
+*     Pates fraiches | 0.600 Kg |  0.83$ *
+*     Saumon congele | 0.810 Kg | 12.35$ *
+*     Oignon congele | 0.125 Kg |  0.39$ *
+*   Poireaux congele | 0.075 Kg |  0.20$ *
+*    Carotte congele | 0.125 Kg |  0.23$ *
+*     Celeri congele | 0.075 Kg |  0.17$ *
+* Melange sel-poivre | 0.007 Kg |  0.01$ *
+*          Vin blanc | 0.100  L |  0.19$ *
+*             Persil | 0.001 Kg |  0.04$ *
+*            Fenouil | 0.001 Kg |  0.02$ *
+*     Poivre cayenne | 0.002 Kg |  0.04$ *
+*             Poivre | 0.002 Kg |  0.03$ *
+*             Farine | 0.120 Kg |  0.09$ *
+*           Canolive | 0.150  L |  0.44$ *
+*               Lait | 1.500  L |  2.11$ *
+*              Creme | 0.500  L |  1.69$ *
+* -------------------------------------- *
+*              Total | 3.930 Kg | 18.83$ *
+******************************************
+
+- Epices fruits de mer
+***********************************
+*      Basilic | 0.045 Kg | 0.63$ *
+* Fines herbes | 0.030 Kg | 0.83$ *
+*      Fenouil | 0.006 Kg | 0.14$ *
+* ------------------------------- *
+*        Total | 0.081 Kg | 1.60$ *
+***********************************
+
 - Farce au fromage
 **********************************************
 *             Ricotta | 1.000 Unite | 25.77$ *
@@ -172,13 +231,13 @@ Vinaigrette mayo: 6.68/L
 * Epinards congele |  2.600 Kg |  11.02$ *
 * Parmesan (econo) |  0.300 Kg |   4.69$ *
 *           Oignon |  0.500 Kg |   0.52$ *
-*        Chapelure |  0.400 Kg |   2.46$ *
+*        Chapelure |  0.400 Kg |   1.61$ *
 *           Farine |  0.200 Kg |   0.15$ *
 *           Poivre |  0.008 Kg |   0.11$ *
 *              Sel |  0.020 Kg |   0.01$ *
 *       Marjolaine |  0.020 Kg |   0.49$ *
 * -------------------------------------- *
-*            Total | 15.000 Kg | 134.95$ *
+*            Total | 15.000 Kg | 134.11$ *
 ******************************************
 
 - Gratin de chou-fleur
@@ -258,6 +317,30 @@ Vinaigrette mayo: 6.68/L
 *            Total | 5.500 Kg | 9.57$ *
 ***************************************
 
+- Poulet cari (plat)
+***********************************************
+* Poulet cari (recette) | 0.350    Kg | 1.27$ *
+*        Fromage (moza) | 0.040    Kg | 0.50$ *
+* ------------------------------------------- *
+*                 Total | 1.000 Unite | 1.77$ *
+***********************************************
+
+- Poulet cari (recette)
+***************************************
+*  Pates fraiches | 0.600 Kg |  0.83$ *
+* Poitrine poulet | 0.500 Kg |  5.97$ *
+*      Champignon | 0.300 Kg |  2.11$ *
+*        Canolive | 0.150  L |  0.44$ *
+*           Creme | 0.550  L |  1.86$ *
+*            Lait | 1.600  L |  2.26$ *
+*          Farine | 0.120 Kg |  0.09$ *
+*  Poudre de cari | 0.015 Kg |  0.07$ *
+*             Sel | 0.008 Kg |  0.00$ *
+*          Poivre | 0.002 Kg |  0.03$ *
+* ----------------------------------- *
+*           Total | 3.760 Kg | 13.66$ *
+***************************************
+
 - Poulet citron & estragon
 ***********************************************
 *    Poitrine poulet | 10.000    Kg | 119.50$ *
@@ -328,6 +411,54 @@ Vinaigrette mayo: 6.68/L
 *              Total | 15.000    Kg | 144.34$ *
 ***********************************************
 
+- Sauce aux fruits de mer
+********************************************
+*    Crevettes congele | 0.500 Kg | 11.41$ *
+*    Petoncles congele | 0.500 Kg |  7.97$ *
+*             Canolive | 0.200  L |  0.58$ *
+*                 Lait | 2.000  L |  2.82$ *
+*                Creme | 0.500  L |  1.69$ *
+*            Vin blanc | 0.125  L |  0.23$ *
+*               Farine | 0.160 Kg |  0.12$ *
+*     Fumet de poisson | 0.050 Kg |  1.79$ *
+* Epices fruits de mer | 0.008 Kg |  0.16$ *
+*               Poivre | 0.001 Kg |  0.01$ *
+*       Poivre cayenne | 0.002 Kg |  0.04$ *
+* ---------------------------------------- *
+*                Total | 3.380 Kg | 26.84$ *
+********************************************
+
+- Sauce aux legumes
+***********************************************
+* Sauce tomates & basilic | 5.000 Kg |  9.10$ *
+*                 Origano | 0.005 Kg |  0.13$ *
+*                  Persil | 0.010 Kg |  0.35$ *
+*                 Romarin | 0.002 Kg |  0.06$ *
+*                  Matouk | 0.035 Kg |  0.12$ *
+*         Carotte congele | 0.350 Kg |  0.65$ *
+*         Zucchinis frais | 0.350 Kg |  1.25$ *
+*         Poivron congele | 0.350 Kg |  1.17$ *
+*          Oignon congele | 0.350 Kg |  1.09$ *
+*        Poireaux congele | 0.350 Kg |  0.94$ *
+*          Celeri congele | 0.350 Kg |  0.79$ *
+*              Champignon | 0.350 Kg |  2.46$ *
+* ------------------------------------------- *
+*                   Total | 7.000 Kg | 18.11$ *
+***********************************************
+
+- Sauce aux palourdes
+**********************************************
+*           Palourdes | 3.000 Unite |  6.42$ *
+*               Creme | 0.350     L |  1.18$ *
+*            Parmesan | 0.050    Kg |  1.47$ *
+* Sauce tomates & ail | 2.200    Kg |  4.27$ *
+*        Fines herbes | 0.005    Kg |  0.14$ *
+*      Poivre cayenne | 0.001    Kg |  0.02$ *
+*             Fenouil | 0.003    Kg |  0.07$ *
+* ------------------------------------------ *
+*               Total | 2.900    Kg | 13.57$ *
+**********************************************
+
 - Sauce base romanoff
 **********************************************
 *     Oignon congele |  1.000    Kg |  3.11$ *
@@ -353,6 +484,15 @@ Vinaigrette mayo: 6.68/L
 * ---------------------------------------- *
 *               Total | 10.000 Kg | 36.81$ *
 ********************************************
+
+- Sauce rosa
+*******************************************
+* Sauce tomates & ail | 5.200 Kg | 10.09$ *
+*               Creme | 1.000  L |  3.38$ *
+*            Parmesan | 0.200 Kg |  5.87$ *
+* --------------------------------------- *
+*               Total | 5.800 Kg | 19.34$ *
+*******************************************
 
 - Sauce tomates & ail
 **********************************************
@@ -399,24 +539,30 @@ Vinaigrette mayo: 6.68/L
 --------------------------------------------------
 
 -- Cout de revient --
-*****************************************************************************************
-*                    Recettes | Prix unitaire | Prix de vente |   Difference  |    %    *
-* --------------------------- | ------------- | ------------- | ------------- | ------- *
-*         Cann. fromage frais |  0.67 / Unite |  2.73 / Unite |  2.06 / Unite |  75.46  *
-*      Cann. fromage romanoff |  2.65 / Unite |  8.70 / Unite |  6.05 / Unite |  69.54  *
-*          Cann. veau basilic |  1.72 / Unite |  7.95 / Unite |  6.23 / Unite |  78.36  *
-*            Cann. veau frais |  0.39 / Unite |  2.70 / Unite |  2.31 / Unite |  85.56  *
-*         Cann. veau romanoff |  2.09 / Unite |  7.95 / Unite |  5.86 / Unite |  73.71  *
-*        Gratin de chou-fleur |  2.61 / Unite |  9.15 / Unite |  6.54 / Unite |  71.48  *
-*              Pate au saumon |  3.95 / Unite | 12.95 / Unite |  9.00 / Unite |  69.50  *
-*                Pate chinois |  2.12 / Unite |  8.50 / Unite |  6.38 / Unite |  75.06  *
-*              Pates fraiches |  1.39 /    Kg | 13.50 /    Kg | 12.11 /    Kg |  89.70  *
-*    Pates fraiches (epinard) |  1.74 /    Kg | 13.50 /    Kg | 11.76 /    Kg |  87.11  *
-*    Poulet citron & estragon |  3.50 / Unite |  9.25 / Unite |  5.75 / Unite |  62.16  *
-* Risotto aux tomates sechees |  3.96 /    Kg | 30.00 /    Kg | 26.04 /    Kg |  86.80  *
-*       Sauce a la viande piq |  9.72 /    Kg | 16.25 /    Kg |  6.53 /    Kg |  40.18  *
-*      Sauce a la viande regu |  9.62 /    Kg | 16.25 /    Kg |  6.63 /    Kg |  40.80  *
-*              Sauce romanoff |  3.68 /    Kg | 17.50 /    Kg | 13.82 /    Kg |  78.97  *
-*     Sauce tomates & basilic |  1.82 /    Kg | 13.25 /    Kg | 11.43 /    Kg |  86.26  *
-*****************************************************************************************
+******************************************************************************************
+*                     Recettes | Cout unitaire | Prix de vente |   Difference  |    %    *
+* ---------------------------- | ------------- | ------------- | ------------- | ------- *
+*          Cann. fromage frais |  0.67 / Unite |  2.73 / Unite |  2.06 / Unite |  75.46  *
+*       Cann. fromage romanoff |  2.65 / Unite |  8.70 / Unite |  6.05 / Unite |  69.54  *
+*           Cann. veau basilic |  1.72 / Unite |  7.95 / Unite |  6.23 / Unite |  78.36  *
+*             Cann. veau frais |  0.39 / Unite |  2.70 / Unite |  2.31 / Unite |  85.56  *
+*          Cann. veau romanoff |  2.09 / Unite |  7.95 / Unite |  5.86 / Unite |  73.71  *
+*    Coquillages saumon (plat) |  2.17 / Unite |  8.45 / Unite |  6.28 / Unite |  74.32  *
+*         Gratin de chou-fleur |  2.61 / Unite |  9.15 / Unite |  6.54 / Unite |  71.48  *
+*               Pate au saumon |  3.95 / Unite | 12.95 / Unite |  9.00 / Unite |  69.50  *
+*                 Pate chinois |  2.12 / Unite |  8.50 / Unite |  6.38 / Unite |  75.06  *
+*               Pates fraiches |  1.39 /    Kg | 13.50 /    Kg | 12.11 /    Kg |  89.70  *
+*     Pates fraiches (epinard) |  1.74 /    Kg | 13.50 /    Kg | 11.76 /    Kg |  87.11  *
+*           Poulet cari (plat) |  1.77 / Unite |  7.75 / Unite |  5.98 / Unite |  77.16  *
+*     Poulet citron & estragon |  3.50 / Unite |  9.25 / Unite |  5.75 / Unite |  62.16  *
+*  Risotto aux tomates sechees |  3.96 /    Kg | 30.00 /    Kg | 26.04 /    Kg |  86.80  *
+*        Sauce a la viande piq |  9.72 /    Kg | 16.25 /    Kg |  6.53 /    Kg |  40.18  *
+*       Sauce a la viande regu |  9.62 /    Kg | 16.25 /    Kg |  6.63 /    Kg |  40.80  *
+*      Sauce aux fruits de mer |  7.94 /    Kg | 21.95 /    Kg | 14.01 /    Kg |  63.83  *
+*            Sauce aux legumes |  2.59 /    Kg | 14.90 /    Kg | 12.31 /    Kg |  82.62  *
+*          Sauce aux palourdes |  4.68 /    Kg | 17.10 /    Kg | 12.42 /    Kg |  72.63  *
+*               Sauce romanoff |  3.68 /    Kg | 17.50 /    Kg | 13.82 /    Kg |  78.97  *
+*                   Sauce rosa |  3.33 /    Kg | 16.75 /    Kg | 13.42 /    Kg |  80.12  *
+*      Sauce tomates & basilic |  1.82 /    Kg | 13.25 /    Kg | 11.43 /    Kg |  86.26  *
+******************************************************************************************
 --------------------------------------------------
